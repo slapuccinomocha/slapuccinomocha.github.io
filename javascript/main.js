@@ -1,0 +1,48 @@
+const readMore = document.getElementById("read-more-button");
+const fabsocTitle = document.getElementById("fabsocTitle");
+const uniPara = document.getElementById("uniPara");
+const scrapbookLink = document.getElementById("scrapbookLink");
+const joinButton = document.getElementById("joinButton");
+const readmorebar = document.getElementById("readmorebar");
+
+const rate = 0.8; // lower = faster fade
+
+fabsocTitle.style.opacity = 0;
+uniPara.style.opacity = 0;
+scrapbookLink.style.opacity = 0;
+joinButton.style.opacity = 0;
+
+
+
+document.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    readMore.style.opacity = 10/window.scrollY*rate;
+    // console.log(fabsocTitle.style.opacity);
+
+  } else {
+    readMore.style.opacity = 1;
+  }
+
+});
+
+let callback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      fabsocTitle.style.opacity = 0;
+      uniPara.style.opacity = 0;
+      scrapbookLink.style.opacity = 0;
+      setTimeout(function(){joinButton.style.opacity = 0;}, 0000);
+      console.log(fabsocTitle.style.opacity);
+    } else {
+      fabsocTitle.style.opacity = 1;
+      uniPara.style.opacity = 1;
+      setTimeout(function(){scrapbookLink.style.opacity = 1;}, 1000);
+      setTimeout(function(){joinButton.style.opacity = 1;}, 2000);
+      console.log(fabsocTitle.style.opacity);
+
+    }
+  });
+};
+const observer = new IntersectionObserver(callback);
+const observed = document.getElementById("fblogo");
+observer.observe(observed);
