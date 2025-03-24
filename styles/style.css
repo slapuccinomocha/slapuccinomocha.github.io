@@ -1,0 +1,1194 @@
+/*
+----------------Shapes & Other Stuff--------------
+*/
+
+/*fonts*/
+
+@font-face {
+    font-family: Playfair;
+    src: url("../fonts/Playfair/PlayfairDisplay-Regular.ttf");
+}
+
+@font-face {
+    font-family: Walkway;
+    src: url("../fonts/Walkway/Walkway\ Black.ttf");
+}
+
+/*Media Inqueries to be responsive to screen size*/
+
+/* For smaller screen sizes (maximum width of 1000px) */
+@media (max-width: 1000px) {
+    .row-padding .third {
+        width: 100%;
+    }
+    .row-padding .half {
+        width: 100%;
+    }
+    .row-padding .quarter {
+        width: 100%;
+    }
+    .half {
+        width: 100%;
+    }
+    .vr {
+        display: none;
+        width: 100%;
+    }
+    nav ul {
+        display: none;
+        font-size: 1vw;
+    }
+    #sidebar-icon {
+        display: block;
+    }
+    #sticky-menu {
+        display: none;
+    }
+
+    h1 {
+        font-size: 15pt;
+    }
+    h2 {
+        font-size: 14pt;
+    }
+    h3 {
+        font-size: 13pt;
+    }
+    h4 {
+        font-size: 12pt;
+    }
+    p {
+        font-size: 9pt;
+    }
+
+    .scrollable {
+        height: 100vh;
+        opacity: 0;
+        z-index: -10;
+        position: relative;
+        top: 90vh;
+    }
+    .homeReveal {
+        text-align: center;
+        height: 54vh;
+        position: sticky;
+        bottom: 0;
+        width: 100vw;
+        z-index: 1;
+        background-color: white;
+    }
+
+    footer {
+        top: 0;
+        position: relative;
+        height: 50vh;
+        /* z-index: 1000; */
+    }
+}
+
+/* For larger screen sizes (minimum width of 1000px) */
+
+@media (min-width: 1000px) {
+    .vr {
+        display: inline-block;
+    }
+    nav ul {
+        display: block;
+    }
+    #sidebar-icon {
+        display: none;
+    }
+    .third {
+        width: 30vw;
+    }
+    .half {
+        width: 45vw;
+    }
+    .quarter {
+        width: 20vw;
+    }
+
+    h1 {
+        font-size: 20pt;
+    }
+    h2 {
+        font-size: 19pt;
+    }
+    h3 {
+        font-size: 18pt;
+    }
+    h4 {
+        font-size: 17pt;
+    }
+    p {
+        font-size: 13pt;
+    }
+
+    .scrollable {
+        height: 65vh;
+        opacity: 0;
+        z-index: -10;
+        position: relative;
+        top: 100vh;
+    }
+    .homeReveal {
+        text-align: center;
+        height: 100vh;
+        position: fixed;
+        bottom: 0vh;
+        width: 100vw;
+        z-index: 1;
+        background-color: white;
+    }
+
+    footer {
+        position: fixed;
+    }
+}
+
+/*Html, Body, Paragrpahs, Headinsgs, Header*/
+
+html {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    background-color: #3a3f48;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: Playfair;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Playfair;
+}
+
+hr {
+    border-bottom: 1px;
+    /* background-color: #bc0b0b; */
+    color: none;
+    width: 60%;
+    margin-top: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: Playfair;
+    margin: inherit;
+    padding: inherit;
+}
+
+h1 {
+    font-weight: 500;
+    background: none;
+}
+
+h2 {
+    font-weight: 800;
+}
+
+h3 {
+    font-weight: 200;
+    padding: 10px 0 10px 0;
+    width: auto;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+h5 {
+    font-weight: lighter;
+}
+
+h6 {
+}
+
+p {
+    font-family: Playfair;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    outline: 0;
+}
+
+header {
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    position: static;
+}
+
+section {
+    background-color: transparent;
+    font-family: Playfair;
+}
+
+footer {
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    background-color: #3a3f48;
+    margin: 30px 0px 30px 0px;
+    color: white;
+    align-items: center;
+    font-family: Playfair;
+    letter-spacing: 2px;
+    font-stretch: extra-condensed;
+    z-index: 1;
+    height: 33vh;
+}
+
+footer ul {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*Footer*/
+.footer-text {
+    text-align: left;
+    margin: 0px;
+}
+
+.black {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.black h1 {
+    margin: 20px auto 25px;
+}
+/*Backgrounds*/
+
+.header-backgrounds {
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Buttons */
+
+.button1 {
+    border: 2px solid white;
+    padding-top: 0.5vh;
+    background-color: rgba(255, 0, 0, 0);
+    color: black;
+    font-size: 11pt;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 100;
+    margin: 0;
+    transition: 200ms;
+    font-family: Playfair;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.button1:hover {
+    transition: 300ms;
+    background-color: white;
+    color: black;
+    font-weight: 1000;
+    letter-spacing: 4px;
+}
+
+.button2 {
+    border: 2px solid black;
+    padding: 13px 26px;
+    background-color: rgba(255, 0, 0, 0);
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 200ms;
+}
+
+.button2:hover {
+    transition: 300ms;
+    opacity: 0.7;
+}
+
+.button3 {
+    border: 2px solid white;
+    padding: 13px 26px;
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 0;
+    transition: 200ms;
+}
+
+.button3:hover {
+    transition: 300ms;
+    background-color: white;
+    color: black;
+}
+.filter {
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    width: 80%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+    transition: opacity 0.2s;
+    transition: 0.5s;
+}
+
+.filter::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    border-radius: 15px;
+    background: gray; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.filter:hover {
+    background-color: white;
+    transition: 0.5s;
+}
+
+/*Read more button styling on index.html*/
+.read-more-button {
+    background-color: white;
+    height: 4vh;
+    bottom: 0px;
+    text-align: center;
+    color: black;
+    display: table;
+    opacity: 100%;
+    vertical-align: middle;
+}
+
+.read-more-button p {
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: 100;
+    font-stretch: condensed;
+    font-style: italic;
+    bottom: 0px;
+}
+
+#joinButton {
+    text-align: right;
+    font-family: Playfair;
+    font-style: italic;
+    color: black;
+}
+
+#joinButton:hover {
+    transition: 500ms;
+    letter-spacing: 4px;
+}
+
+/*Images and Image Sizes*/
+
+.arrow {
+    position: relative;
+    max-height: 40px;
+    max-width: 50px;
+    margin-top: 4px;
+    margin-left: 5px;
+    bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.logo {
+    padding: 10px 10px;
+    vertical-align: middle;
+}
+
+/*Image Slideshow*/
+
+.prev,
+.next {
+    filter: invert();
+    border: none;
+    width: 30px;
+    height: 30px;
+    top: 140px;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+}
+
+.prev {
+    left: 0;
+}
+.next {
+    left: 420px;
+}
+
+.slide-images {
+    position: absolute;
+    max-width: 450px;
+    max-height: 281px;
+    min-width: 450px;
+    min-height: 281px;
+    text-decoration: none;
+}
+
+.side-text {
+    margin-left: 500px;
+    position: relative;
+    text-align: left;
+    float: left;
+}
+
+.slide-container {
+    animation: fade 0.8s;
+    transition: 10ms;
+}
+
+.slide-images {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 450px;
+    height: 281px;
+    word-wrap: break-word;
+}
+
+.slideshow {
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+
+    margin-left: 200px;
+    margin-bottom: 50px;
+
+    width: 1000px;
+    height: 281px;
+}
+
+.slideshow-text {
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    font-size: 13px;
+    padding: 13px 8px;
+}
+
+/*Navigation Bar*/
+
+.filter-menu {
+    background-color: lightgray;
+    color: black;
+    height: 800px;
+}
+
+#sidebar {
+    height: 100vh;
+    width: 100vh;
+    text-align: center;
+    left:;
+    top: 0;
+    position: fixed;
+    z-index: 9;
+    opacity: scroll;
+    overflow: auto;
+    transition: 0.5s;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/*Sticky Menu*/
+#sticky-menu {
+    top: 0;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 300;
+    height: 1vh;
+    width: 100%;
+    content: "";
+    display: table;
+    position: absolute;
+    clear: both;
+    z-index: 100;
+    overflow: visible;
+    background-color: none;
+
+    animation: fadein 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    transition: 0.5s;
+}
+
+#sticky-menu nav {
+    text-align: center;
+}
+#sticky-menu nav ul {
+    margin: 0;
+    padding-right: 10px;
+    list-style: none;
+    transition: 0.5s;
+    vertical-align: middle;
+}
+
+#sticky-menu nav ul li a {
+    color: white;
+}
+
+#sticky-menu ul:hover > li:not(:hover) {
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+#sticky-menu ul li:hover {
+    cursor: pointer;
+}
+
+#sticky-menu ul:hover > li:active {
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+#sticky-menu nav li {
+    padding: 15px 0;
+    display: inline-block;
+    margin-left: 70px;
+    transition: 0.5s;
+    position: relative;
+    vertical-align: middle;
+}
+
+#sticky-menu nav li:active {
+    background-color: none;
+    opacity: 0.3;
+    transition: all ease-in-out 500ms;
+}
+
+#sticky-menu nav li:not(:active) {
+    transition: all ease-in-out 500ms;
+}
+
+#sticky-menu button {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    background: none;
+    border: none;
+}
+
+#sticky-menu nav li input {
+    padding: 10px 10px;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 3px solid white;
+    display: block;
+    color: white;
+    font-family: Playfair;
+    transition: ease-in-out 300ms;
+    width: 100px;
+}
+
+#sticky-menu nav li input:focus {
+    width: 200px;
+    background-color: white;
+    color: white;
+    transition: width 0.4s ease-in-out;
+}
+
+#sticky-menu nav li input:hover {
+    width: 200px;
+    color: white;
+    transition: width 0.4s ease-in-out;
+}
+
+#sticky-menu nav a {
+    padding: 10px 0;
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+.contents {
+    text-decoration: none;
+    list-style: none;
+    text-indent: none;
+}
+
+.contents-text {
+    font-size: 40px;
+    text-decoration: none;
+    font-family: Playfair;
+    color: white;
+    transition: 0.25s;
+}
+
+.contents-text:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+.contents-heading {
+    margin-top: 70px;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: Playfair;
+    color: white;
+}
+
+/*Icons*/
+
+#sidebar-icon {
+    z-index: 10;
+    top: 4vh;
+    left: 4vw;
+    margin: 0 auto;
+    padding: auto;
+    width: 27px;
+    height: 23px;
+    padding: 5px 16px;
+    position: absolute;
+    cursor: pointer;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+#sidebar-icon:hover {
+    color: black;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+#exit-icon {
+    -webkit-filter: invert(1);
+    filter: (1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    transition: 0.3s;
+}
+#exit-icon:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+/*Miscellanious */
+
+.headings {
+    font-weight: bold;
+    color: #303030;
+    font-size: 30px;
+}
+
+.centre {
+    height: 100%;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-color: transparent;
+}
+
+.search-bar {
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    display: block;
+    font-family: inherit;
+    transition: ease-in-out 300ms;
+    background-repeat: no-repeat;
+}
+
+/*side socials menu*/
+#side-socials-menu {
+    background-color: none;
+    position: absolute;
+    display: flex;
+    color: white;
+    right: 20px;
+    height: 100%;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    padding: 0;
+    line-height: 6vh;
+    z-index: 1;
+
+    animation: slide-right 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    transition: 0.5s;
+}
+
+#side-socals-menu ul {
+    list-style: none;
+    list-style-type: armenia;
+    padding: inherit;
+}
+
+.side-icons {
+    height: 30px;
+    width: 30px;
+    padding: 0 2px;
+}
+
+.selected {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+/*Animations*/
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        top: -50px;
+    }
+    to {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        height: 0;
+    }
+    to {
+        height: 50px;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        top: 0;
+    }
+    to {
+        top: 40px;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        opacity: 0;
+        right: 0px;
+    }
+    to {
+        opacity: 1;
+        right: 20px;
+    }
+}
+
+/*Contact form*/
+.contact {
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+.names {
+    border: none;
+    border-bottom: 2px solid gray;
+    display: block;
+    position: relative;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    margin: 20px 20px;
+    transition: 0.5s;
+    width: 15vw;
+    font-size: 14px;
+    outline: none;
+}
+. .message {
+    border: 1px solid gray;
+    display: inline-block;
+}
+
+.info {
+    text-align: left;
+    margin: 10px;
+    text-decoration: none;
+    color: gray;
+    font-weight: none;
+    display: inline-block;
+}
+
+.icon {
+    margin-top: 4px;
+    text-align: left;
+    margin-right: 10px;
+    padding: 0;
+    vertical-align: middle;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: left;
+}
+
+/*Login*/
+.username {
+    border: none;
+    border-bottom: 2px solid gray;
+    display: block;
+    position: relative;
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    margin: 20px 70px;
+    transition: 0.5s;
+    width: 30vw;
+    font-size: 14px;
+}
+.password {
+    border: none;
+    border-bottom: 2px solid gray;
+    display: block;
+    position: relative;
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    margin: 70px 70px;
+    transition: 0.5s;
+    width: 30vw;
+    font-size: 14px;
+}
+
+.username,
+.password {
+    outline: none;
+}
+
+.password:focus,
+.username:focus {
+    border-bottom: 2px solid black;
+    transition: 0.5s;
+}
+
+.password:hover,
+.username:hover {
+    border-bottom: 2px solid white;
+    transition: 0.5s;
+}
+
+.login {
+    border: 2px solid white;
+    position: absolute;
+    display: block;
+    padding: 1px 6px;
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+    left: 4vw;
+    top: 58vh;
+    transition: 200ms;
+}
+
+.login:hover {
+    transition: 300ms;
+    background-color: white;
+    color: black;
+}
+
+.forgot {
+    border: 2px solid white;
+    display: inline;
+    padding: 1px 6px;
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    left: 10vw;
+    top: 58vh;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    width: 250px;
+    height: 50px;
+    margin-left: 70px;
+    transition: 200ms;
+}
+
+.forgot:hover {
+    transition: 300ms;
+    background-color: white;
+    color: black;
+}
+
+.vr {
+    display: inline;
+    border-right: 2px solid white;
+    margin: 0;
+    height: 250px;
+    width: 1px;
+    position: absolute;
+    left: 35vw;
+}
+
+.altern-acc {
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: left;
+    margin: 20px 40px;
+    display: block;
+    border: 2px solid white;
+    width: 15vw;
+    font-size: 14px;
+}
+.fb {
+    background-color: #3b5998;
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+.ggl {
+    background-color: #d34836;
+    color: white;
+}
+.twtr {
+    background-color: #55acee;
+    color: white;
+}
+
+.fb,
+.ggl,
+.twtr {
+    opacity: 0.4;
+    transition: 0.5s;
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    overflow: hidden;
+}
+.fb:hover,
+.ggl:hover,
+.twtr:hover {
+    transition: 0.5s;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.login-form {
+    display: inline;
+}
+
+/*Cookie Banner*/
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: black;
+    height: 70px;
+    opacity: 0.9;
+    z-index: 100;
+    color: white;
+    animation-fill-mode: backwards;
+    animation-name: slide-up;
+    animation-delay: 2s;
+    animation-duration: 0.5s;
+}
+
+.ok {
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    padding: 10px 40px;
+    border: 2px solid white;
+    position: absolute;
+    top: 12px;
+    left: 80vw;
+}
+.ok:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+/*Gallery*/
+
+.gallery-images {
+    box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    margin-top: 10px;
+    max-width: 43vw;
+    max-height: 90vh;
+    margin: 10px 1px;
+}
+/*Droppy*/
+#dropdown {
+    vertical-align: -50%;
+    max-width: 100px;
+    position: relative;
+}
+
+#dropdown-button {
+}
+
+#dropdown-content {
+    border-radius: 10px;
+    transition: 0.5s;
+    display: none;
+    overflow: visible;
+    position: absolute;
+}
+
+.dropcon {
+    /* animation: slide-down 2s; */
+    margin: 10px 0 10px 0;
+    transition: all ease-in-out 500ms;
+}
+
+#dropdown:hover #dropdown-content {
+    animation: slide-down 0.5s;
+    display: block;
+}
+
+#dropdown:not(:hover) #dropdown-content {
+    animation: slide-down 1s;
+    animation-direction: alternate-reverse;
+}
+
+#dropdown #dropdown-content a:not(:hover) {
+    transition: all ease-in-out 500ms;
+    opacity: 0.7;
+}
+
+.middle-column p {
+    text-align: center;
+}
+
+.right-column p {
+    text-align: right;
+}
+
+/*centred text wrapper on middle section on index.html*/
+.centre-card {
+    /* opacity: 0; */
+    display: inline-block;
+    text-align: left;
+    transition: all 2s linear;
+}
+
+.centre-card h2,
+p,
+h3,
+h4 {
+    transition: all 500ms linear;
+}
+
+/*styling for scrapbook link text on index.html*/
+
+#scrapbookLink:hover {
+    letter-spacing: 2px;
+    color: red;
+    transition: 0.5s;
+}
+
+/*styling for team.html*/
+.teamheader {
+    margin-top: 10vh;
+    height: 30vh;
+    width: 100vw;
+    color: white;
+}
+
+.teamheader h2 {
+    color: white;
+    text-align: center;
+    text-decoration: overline;
+}
+
+.separator {
+    top: 50vh;
+    width: 200vw;
+    height: 200px;
+    left: -200vw;
+    position: fixed;
+}
+
+.scrapSections {
+    position: absolute;
+}
+
+.scrapFulls {
+    position: inherit;
+    border: 3px #ffffff solid;
+    z-index: 1;
+}
+
+.scrapPNGs {
+    position: inherit;
+    z-index: 5;
+}
+
+.scrapGroups {
+}
+
+/* Sections and their purpose*/
+
+/*This section is hidden and allows the user to scroll down on the home page so the join button can be seen*/
+.Home {
+    background-image: url("../images/landingBg.jpeg");
+    background-size: cover;
+    /* background-attachment: fixed; */
+    opacity: 100%;
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+}
