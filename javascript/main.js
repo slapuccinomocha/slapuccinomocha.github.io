@@ -12,6 +12,7 @@ uniPara.style.opacity = 0;
 scrapbookLink.style.opacity = 0;
 joinButton.style.opacity = 0;
 
+// side menu toggle
 function sidebar_toggle() {
   var x = document.getElementById("sidebar");
   var y = document.getElementById("sidebar-icon");
