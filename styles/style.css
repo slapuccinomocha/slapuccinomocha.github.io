@@ -17,7 +17,7 @@
 /*Media Inqueries to be responsive to screen size*/
 
 /* For smaller screen sizes (maximum width of 1000px) */
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .row-padding .third {
         width: 100%;
     }
@@ -73,22 +73,44 @@
         height: 56vh;
         position: sticky;
         bottom: 0;
-        width: 100vw;
+        width: 100%;
         z-index: 1;
         background-color: white;
     }
 
     footer {
-        top: 0;
-        position: relative;
-        height: 50vh;
-        /* z-index: 1000; */
+        position: absolute;
+        flex-direction: column;
+        height: 70vh;
+        width: 100%;
+    }
+
+    .left-column p {
+        text-align: center;
+    }
+
+    .middle-column p {
+        text-align: center;
+    }
+
+    .right-column p {
+        text-align: center;
+    }
+
+    .teamPicture {
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .teamPNGs {
+        width: 70vw;
     }
 }
 
 /* For larger screen sizes (minimum width of 1000px) */
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
     .vr {
         display: inline-block;
     }
@@ -143,10 +165,12 @@
 
     footer {
         position: fixed;
+        flex-direction: row;
+        height: 33vh;
     }
 
     .left-column p {
-        text-align: center;
+        text-align: left;
     }
 
     .middle-column p {
@@ -155,6 +179,15 @@
 
     .right-column p {
         text-align: right;
+    }
+
+    .teamPicture {
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
+    .teamPNGs {
+        width: 35vw;
     }
 }
 
@@ -176,6 +209,10 @@ body {
     font-family: Playfair;
     /* overflow-x: hidden; */
     background-image: red;
+}
+
+div {
+    max-width: 100%;
 }
 
 hr {
@@ -230,6 +267,7 @@ p {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 button,
@@ -254,9 +292,7 @@ section {
 }
 
 footer {
-    position: relative;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     vertical-align: middle;
     text-align: center;
@@ -269,12 +305,12 @@ footer {
     letter-spacing: 2px;
     font-stretch: extra-condensed;
     z-index: 1;
-    height: 33vh;
 }
 
 footer ul {
     display: table-cell;
     vertical-align: middle;
+    padding: 0;
 }
 
 /*Footer*/
@@ -448,6 +484,9 @@ footer ul {
 .logo {
     padding: 10px 10px;
     vertical-align: middle;
+    max-width: 70px;
+    max-height: 70px;
+    padding: 0px;
 }
 
 /*Image Slideshow*/
@@ -538,7 +577,7 @@ footer ul {
     height: 100vh;
     width: 100vh;
     text-align: center;
-    left:;
+    left: 0;
     top: 0;
     position: fixed;
     z-index: 9;
@@ -826,10 +865,10 @@ footer ul {
 
 @keyframes slide-down {
     from {
-        top: 0;
+        margin-top: -15px;
     }
     to {
-        top: 40px;
+        margin-top: 15px;
     }
 }
 
@@ -865,7 +904,7 @@ footer ul {
     font-size: 14px;
     outline: none;
 }
-. .message {
+.message {
     border: 1px solid gray;
     display: inline-block;
 }
@@ -1047,7 +1086,7 @@ footer ul {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     background-color: black;
     height: 70px;
     opacity: 0.9;
@@ -1089,7 +1128,7 @@ footer ul {
 }
 /*Droppy*/
 #dropdown {
-    vertical-align: -50%;
+    /* vertical-align: -50%; */
     max-width: 100px;
     position: relative;
 }
@@ -1098,22 +1137,27 @@ footer ul {
 }
 
 #dropdown-content {
-    border-radius: 10px;
     transition: 0.5s;
     display: none;
+    flex-direction: column;
     overflow: visible;
     position: absolute;
+    text-align: left;
 }
 
 .dropcon {
-    /* animation: slide-down 2s; */
-    margin: 10px 0 10px 0;
     transition: all ease-in-out 500ms;
+}
+
+.dropcon::before {
+    content: ">";
 }
 
 #dropdown:hover #dropdown-content {
     animation: slide-down 0.5s;
-    display: block;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 #dropdown:not(:hover) #dropdown-content {
@@ -1124,14 +1168,6 @@ footer ul {
 #dropdown #dropdown-content a:not(:hover) {
     transition: all ease-in-out 500ms;
     opacity: 0.7;
-}
-
-.middle-column p {
-    text-align: center;
-}
-
-.right-column p {
-    text-align: right;
 }
 
 /*centred text wrapper on middle section on index.html*/
@@ -1161,14 +1197,52 @@ h4 {
 .teamheader {
     margin-top: 10vh;
     height: 30vh;
-    width: 100vw;
+    width: 100%;
     color: white;
+}
+
+.teamheader h1 {
+    opacity: 0;
+    font-size: 30pt;
+    animation: fade 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
 }
 
 .teamheader h2 {
     color: white;
     text-align: center;
     text-decoration: overline;
+}
+
+/* Wrapper for team to act as absolute position */
+.teamSection {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 300vh;
+    top: 100vh;
+}
+
+/* inner div for text */
+.teamText {
+    line-height: 40px;
+    position: sticky;
+    color: white;
+    text-align: right;
+}
+.teamText h1 {
+    font-weight: 900;
+}
+
+/* Inner div for image holding*/
+.teamPicture {
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    align-items: center;
 }
 
 .separator {
@@ -1178,6 +1252,8 @@ h4 {
     left: -200vw;
     position: fixed;
 }
+
+/* styles for scrapbook.html */
 
 .scrapSections {
     position: absolute;
@@ -1190,8 +1266,7 @@ h4 {
 }
 
 .scrapPNGs {
-    position: inherit;
-    z-index: 5;
+    position: fixed;
 }
 
 .scrapGroups {
@@ -1207,5 +1282,6 @@ h4 {
     opacity: 100%;
     position: absolute;
     z-index: 2;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
 }
