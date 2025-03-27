@@ -136,13 +136,25 @@
         height: 100vh;
         position: fixed;
         bottom: 0vh;
-        width: 100vw;
+        width: 100%;
         z-index: 1;
         background-color: white;
     }
 
     footer {
         position: fixed;
+    }
+
+    .left-column p {
+        text-align: center;
+    }
+
+    .middle-column p {
+        text-align: center;
+    }
+
+    .right-column p {
+        text-align: right;
     }
 }
 
@@ -154,7 +166,7 @@ html {
     scroll-behavior: smooth;
     background-color: #3a3f48;
     max-width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-family: Playfair;
 }
 
@@ -162,6 +174,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Playfair;
+    /* overflow-x: hidden; */
+    background-image: red;
 }
 
 hr {
@@ -240,7 +254,10 @@ section {
 }
 
 footer {
-    display: table;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     vertical-align: middle;
     text-align: center;
     width: 100%;
