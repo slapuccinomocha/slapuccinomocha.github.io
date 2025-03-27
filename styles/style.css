@@ -320,14 +320,18 @@ footer ul {
 }
 
 .black {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: black;
     width: 100%;
-    height: 100%;
+    height: 96%;
     opacity: 0.5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    z-index: 5;
 }
 .black h1 {
     margin: 20px auto 25px;
@@ -443,6 +447,8 @@ footer ul {
     display: table;
     opacity: 100%;
     vertical-align: middle;
+    position: absolute;
+    width: 100%;
 }
 
 .read-more-button p {
@@ -856,10 +862,10 @@ footer ul {
 
 @keyframes slide-up {
     from {
-        height: 0;
+        bottom: -200px;
     }
     to {
-        height: 50px;
+        bottom: 0px;
     }
 }
 
@@ -1215,6 +1221,10 @@ h4 {
     text-decoration: overline;
 }
 
+#wholeteam {
+    animation: slide-up 2s;
+}
+
 /* Wrapper for team to act as absolute position */
 .teamSection {
     position: absolute;
@@ -1231,8 +1241,12 @@ h4 {
     color: white;
     text-align: right;
 }
+
 .teamText h1 {
     font-weight: 900;
+    height: 150px;
+    margin-top: -200px;
+    text-align: center;
 }
 
 /* Inner div for image holding*/
@@ -1266,7 +1280,7 @@ h4 {
 }
 
 .scrapPNGs {
-    position: fixed;
+    position: relative;
 }
 
 .scrapGroups {
@@ -1284,4 +1298,11 @@ h4 {
     z-index: 2;
     width: 100%;
     max-width: 100%;
+}
+.videowrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
