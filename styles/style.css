@@ -62,11 +62,11 @@
     }
 
     .scrollable {
-        height: 100vh;
+        height: 100dvh;
         opacity: 0;
         z-index: -10;
         position: relative;
-        top: 90vh;
+        top: 90dvh;
     }
     .homeReveal {
         text-align: center;
@@ -81,7 +81,8 @@
     footer {
         position: absolute;
         flex-direction: column;
-        height: 70vh;
+        justify-content: space-between;
+        height: 70dvh;
         width: 100%;
     }
 
@@ -104,7 +105,18 @@
         align-items: center;
     }
     .teamPNGs {
-        width: 70vw;
+        max-height: 50vw;
+    }
+    #teamTextHead {
+        text-align: center;
+        height: inherit;
+        margin: 0 0 3vh 0;
+    }
+    .teamText {
+        text-align: center;
+    }
+    .teamDivider {
+        display: none;
     }
 }
 
@@ -151,13 +163,13 @@
         opacity: 0;
         z-index: -10;
         position: relative;
-        top: 100vh;
+        top: 100dvh;
     }
     .homeReveal {
         text-align: center;
-        height: 100vh;
+        height: 100dvh;
         position: fixed;
-        bottom: 0vh;
+        bottom: 0dvh;
         width: 100%;
         z-index: 1;
         background-color: white;
@@ -166,6 +178,7 @@
     footer {
         position: fixed;
         flex-direction: row;
+        justify-content: space-around;
         height: 33vh;
     }
 
@@ -186,8 +199,20 @@
         flex-direction: row;
         align-items: center;
     }
+    .teamText {
+        text-align: right;
+    }
     .teamPNGs {
-        width: 35vw;
+        max-width: 25vw;
+    }
+    #teamTextHead {
+        text-align: left;
+        height: 150px;
+        margin-top: -18vh;
+    }
+
+    .teamDivider {
+        display: block;
     }
 }
 
@@ -208,7 +233,8 @@ body {
     padding: 0;
     font-family: Playfair;
     /* overflow-x: hidden; */
-    background-image: red;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
 }
 
 div {
@@ -277,7 +303,7 @@ input {
 
 header {
     background-size: cover;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -293,7 +319,6 @@ section {
 
 footer {
     display: flex;
-    justify-content: space-around;
     vertical-align: middle;
     text-align: center;
     width: 100%;
@@ -317,6 +342,7 @@ footer ul {
 .footer-text {
     text-align: left;
     margin: 0px;
+    font-size: 10pt;
 }
 
 .black {
@@ -340,7 +366,7 @@ footer ul {
 
 .header-backgrounds {
     background-size: cover;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -580,8 +606,8 @@ footer ul {
 }
 
 #sidebar {
-    height: 100vh;
-    width: 100vh;
+    height: 100dvh;
+    width: 100dvw;
     text-align: center;
     left: 0;
     top: 0;
@@ -862,10 +888,12 @@ footer ul {
 
 @keyframes slide-up {
     from {
-        bottom: -200px;
+        bottom: -55dvh;
+        opacity: 0;
     }
     to {
-        bottom: 0px;
+        bottom: 0dvh;
+        opacity: 1;
     }
 }
 
@@ -1129,7 +1157,7 @@ footer ul {
     position: relative;
     margin-top: 10px;
     max-width: 43vw;
-    max-height: 90vh;
+    max-height: 90dvh;
     margin: 10px 1px;
 }
 /*Droppy*/
@@ -1201,8 +1229,8 @@ h4 {
 
 /*styling for team.html*/
 .teamheader {
-    margin-top: 10vh;
-    height: 30vh;
+    margin-top: 10dvh;
+    height: 30dvh;
     width: 100%;
     color: white;
 }
@@ -1212,7 +1240,7 @@ h4 {
     font-size: 30pt;
     animation: fade 2s;
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 .teamheader h2 {
@@ -1222,7 +1250,12 @@ h4 {
 }
 
 #wholeteam {
+    position: absolute;
+    opacity: 0;
+    bottom: -55vh;
     animation: slide-up 2s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
 }
 
 /* Wrapper for team to act as absolute position */
@@ -1230,8 +1263,8 @@ h4 {
     position: absolute;
     display: flex;
     width: 100%;
-    height: 300vh;
-    top: 100vh;
+    height: 1100dvh;
+    top: 100dvh;
 }
 
 /* inner div for text */
@@ -1239,32 +1272,41 @@ h4 {
     line-height: 40px;
     position: sticky;
     color: white;
-    text-align: right;
 }
 
 .teamText h1 {
     font-weight: 900;
     height: 150px;
     margin-top: -200px;
-    text-align: center;
+    text-align: left;
+}
+
+#teamTextBody {
+    height: 205px;
+}
+
+#teamTextBody span {
+    opacity: 0.5;
+}
+
+#teamTextHead {
+    min-width: 300px;
 }
 
 /* Inner div for image holding*/
 .teamPicture {
     position: sticky;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     top: 0;
     display: flex;
     align-items: center;
 }
 
-.separator {
-    top: 50vh;
-    width: 200vw;
-    height: 200px;
-    left: -200vw;
-    position: fixed;
+.teamDivider {
+    background-color: white;
+    width: 0.5vw;
+    height: 70dvh;
 }
 
 /* styles for scrapbook.html */
