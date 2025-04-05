@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="shortcut icon" href="/whiteLogo.ico" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Events | Fashion and Beauty Society UNSW</title>
+    </head>
+    <body style="background-color: black">
+        <!-- SIDE BAR ACCESSED BY THE BURGER MENU LOCATED IN THE HEADER DIV (FOR SMALLER SCREENSIZES)  -->
+
+        <div id="sidebar" style="width: 0px">
+            <div class="black centre">
+                <div class="contents">
+                    <p class="contents-heading" style="padding-top: 10px">
+                        <b>FABSOC UNSW 2025</b>
+                    </p>
+                    <nav>
+                        <a
+                            class="contents-heading"
+                            href="index.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">home</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="team.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">our team</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="partners.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">partners</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="scrapbook.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">SS25</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="blog.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">blog</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="events.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">events</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="contact.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">contact</p></a
+                        >
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Sticky menu -->
+
+        <div id="sticky-menu">
+            <nav>
+                <ul>
+                    <li><a href="team.html">our team</a></li>
+                    <li>
+                        <div id="dropdown">
+                            <a
+                                href="partners.html"
+                                class=""
+                                id="dropdown-button"
+                                >partners</a
+                            >
+                            <div id="dropdown-content">
+                                <a href="partners.html#past" class="dropcon"
+                                    >past partners</a
+                                >
+                                <a href="partners.html#current" class="dropcon"
+                                    >current partners</a
+                                >
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html"
+                            ><img
+                                class="logo"
+                                src="images/whiteLogo.png"
+                                alt="FABSOC UNSW Logo"
+                            />
+                        </a>
+                    </li>
+                    <li><a href="scrapbook.html">SS25</a></li>
+                    <li><a class="selected" href="events.html">events</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- BUTTON TO ACCESS SIDE BAR (WILL HIDE ON SCREEN SIZES SMALLER THAN 1000px) -->
+
+        <input
+            type="image"
+            name="sidebar-icon"
+            id="sidebar-icon"
+            style="z-index: 100"
+            src="images/sidebar-icon.png"
+            onclick="sidebar_toggle()"
+        />
+
+        <section>
+            <div class="eventsHeader">
+                <div class="eventsTitleImages">
+                    <img
+                        src="images/textflowers.png"
+                        style="transform: scale(-1, 1)"
+                    />
+                </div>
+                <div class="eventsTitle"><h1>events</h1></div>
+                <div class="eventsTitleImages">
+                    <img src="images/textflowers.png" />
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: black">
+            <div class="flowerHeader">
+                <div class="eventsTitleImages">
+                    <img
+                        src="images/textflowers.png"
+                        style="transform: scale(-1, 1)"
+                    />
+                </div>
+                <h2>upcoming events</h2>
+                <div class="eventsTitleImages">
+                    <img src="images/textflowers.png" />
+                </div>
+            </div>
+            <div class="upcoming eventsMain">
+                <div class="eventsCard">
+                    <div class="eventsCardImage">
+                        <img
+                            src="images/landingBg.jpeg"
+                            alt="first image picture"
+                        />
+                    </div>
+                    <div class="eventsCardText">
+                        <h2>
+                            KPOPSOC x FABSOC x HKSA x SSA x MSO Presents:
+                            PUBCRAW
+                        </h2>
+                        <h5>&#8962; : TBC</h5>
+                        <h5>&#9719; : 19th April 2025</h5>
+                        <h5>&#36; : $10 per pp</h5>
+                    </div>
+                    <div class="eventsButton">
+                        <a
+                            ><button type="button" name="eventButton">
+                                <img
+                                    src="images/downarrow.png"
+                                    alt="arrow"
+                                /></button
+                        ></a>
+                    </div>
+                </div>
+                <div class="eventsCard">
+                    <div class="eventsCardImage">
+                        <img
+                            src="images/unannounced.png"
+                            alt="first image picture"
+                        />
+                    </div>
+                    <div class="eventsCardText">
+                        <h2>FABSOC Presents: Event # 2</h2>
+                        <h5>&#8962; :</h5>
+                        <h5>&#9719; :</h5>
+                        <h5>&#36; :</h5>
+                    </div>
+                    <div class="eventsButton">
+                        <a
+                            ><button type="button" name="eventButton">
+                                <img
+                                    src="images/downarrow.png"
+                                    alt="arrow"
+                                /></button
+                        ></a>
+                    </div>
+                </div>
+                <div class="eventsCard">
+                    <div class="eventsCardImage">
+                        <img
+                            src="images/unannounced.png"
+                            alt="first image picture"
+                        />
+                    </div>
+                    <div class="eventsCardText">
+                        <h2>FABSOC Presents: Event # 3</h2>
+                        <h5>&#8962; :</h5>
+                        <h5>&#9719; :</h5>
+                        <h5>&#36; :</h5>
+                    </div>
+                    <div class="eventsButton">
+                        <a
+                            ><button type="button" name="eventButton">
+                                <img
+                                    src="images/downarrow.png"
+                                    alt="arrow"
+                                /></button
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="background-color: black">
+            <div class="flowerHeader">
+                <div class="eventsTitleImages">
+                    <img
+                        src="images/textflowers.png"
+                        style="transform: scale(-1, 1)"
+                    />
+                </div>
+                <h2>past events</h2>
+                <div class="eventsTitleImages">
+                    <img src="images/textflowers.png" />
+                </div>
+            </div>
+            <div class="past eventsMain">
+                <div class="eventsCard">
+                    <div class="eventsCardImage">
+                        <img
+                            src="images/events/pastevent1.jpg"
+                            alt="first image picture"
+                        />
+                    </div>
+                    <div class="eventsCardText">
+                        <h2>FABSOC X PHOTOSOC: Studio Shoot</h2>
+                    </div>
+                    <div class="eventsButton">
+                        <a
+                            ><button type="button" name="eventButton">
+                                SS25 >
+                            </button></a
+                        >
+                    </div>
+                </div>
+                <div class="eventsCard">
+                    <div class="eventsCardImage">
+                        <img
+                            src="images/unannounced.png"
+                            alt="first image picture"
+                        />
+                    </div>
+                    <div class="eventsCardText">
+                        <h2>FABSOC watches the sunset</h2>
+                    </div>
+                    <div class="eventsButton">
+                        <a
+                            ><button type="button" name="eventButton">
+                                SS25 >
+                            </button></a
+                        >
+                    </div>
+                </div>
+                <div class="eventsCard">
+                    <div class="eventsCardImage">
+                        <img
+                            src="images/unannounced.png"
+                            alt="first image picture"
+                        />
+                    </div>
+                    <div class="eventsCardText">
+                        <h2>O-Week 2025</h2>
+                    </div>
+                    <div class="eventsButton">
+                        <a
+                            ><button type="button" name="eventButton">
+                                SS25 >
+                            </button></a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer style="position: relative">
+            <ul class="left-column">
+                <a href="team.html"><p class="footer-text">our team</p></a>
+                <br />
+                <a href="partners.html"><p class="footer-text">partners</p></a>
+                <br />
+                <a href="events.html"><p class="footer-text">events</p></a>
+                <br />
+                <a href="scrapbook.html"
+                    ><p class="footer-text">scrapbook</p></a
+                >
+                <br />
+                <a href="contact.html"><p class="footer-text">contact</p></a>
+            </ul>
+
+            <ul class="middle-column">
+                <a href="https://www.tiktok.com/@fabsocunsw"
+                    ><p class="footer-text">tiktok</p></a
+                >
+                <br />
+                <a href="https://www.facebook.com/fabsocunsw/"
+                    ><p class="footer-text">facebook</p></a
+                >
+                <br />
+                <a href="https://www.instagram.com/fabsocunsw/"
+                    ><p class="footer-text">instagram</p></a
+                >
+                <br />
+                <a href="https://www.youtube.com/fabsocunsw/"
+                    ><p class="footer-text">youtube</p></a
+                >
+                <br />
+                <a href="https://www.discord.com/fabsocunsw/"
+                    ><p class="footer-text">discord</p></a
+                >
+            </ul>
+
+            <ul class="right-column">
+                <a href="blog.html"><p class="footer-text">blog</p></a>
+                <br />
+                <a href="fit.html"><p class="footer-text">fit cusotmiser</p></a>
+                <br />
+                <a href="FAQ.html"><p class="footer-text">FAQ</p></a>
+                <br />
+                <a href="terms.html"><p class="footer-text">terms of use</p></a>
+                <br />
+                <a href="privacy.html"
+                    ><p class="footer-text">privacy policy</p></a
+                >
+            </ul>
+        </footer>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="javascript/uncompressed/ScrollMagic.js"></script>
+    <script src="javascript/events.js"></script>
+</html>

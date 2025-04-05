@@ -3,7 +3,6 @@
     <head>
         <link rel="stylesheet" href="styles/style.css" />
         <link rel="shortcut icon" href="/whiteLogo.ico" />
-
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Our Team | Fashion and Beauty Society UNSW</title>
@@ -114,52 +113,45 @@
             onclick="sidebar_toggle()"
         />
 
-        <section>
-            <div class="centre teamheader">
-                <h1>welcome, meet your directors</h1>
-            </div>
+        <section class="headersection">
+            <div id="teamheaderL"></div>
+            <div id="teamheaderR"></div>
+            <h1>welcome! meet the directors</h1>
         </section>
 
-        <!-- Whole team edit -->
-        <div id="wholeteam" style="">
-            <img
-                src="images/ourteam/mainTeam2.png"
-                style="width: 100%; border-bottom: 14px white solid"
-            />
-        </div>
-
-        <div class="teamSection">
-            <div class="teamPicture">
-                <div class="teamText">
-                    <h1 id="teamTextHead">our team</h1>
-                    <p id="teamTextBody">
-                        <span id="line1"> </span> <br />
-                        <span id="line2"> </span> <br />
-                        <span
-                            id="line3"
-                            style="
-                                font-weight: bold;
-                                opacity: 1;
-                                font-size: 18pt;
-                            "
-                        >
-                        </span>
-                        <br />
-                        <span id="line4"> </span> <br />
-                        <span id="line5"> </span>
-                    </p>
-                </div>
-                <div class="teamDivider"></div>
-                <img
-                    id="teamimg"
-                    class="teamPNGs"
-                    src="images/ourteam/team1.jpg"
-                />
-            </div>
-        </div>
-
         <section>
-            <div style="height: 1200vh"></div>
+            <div class="teamSection">
+                <div class="teamPicture">
+                    <div class="teamText">
+                        <h2 id="teamTextHead">our team</h2>
+                        <p id="teamTextBody">
+                            <span id="line1"> </span> <br />
+                            <span id="line2"> </span> <br />
+                            <span
+                                id="line3"
+                                style="
+                                    font-weight: bold;
+                                    opacity: 1;
+                                    font-size: 18pt;
+                                "
+                            >
+                            </span>
+                            <br />
+                            <span id="line4"> </span> <br />
+                            <span id="line5"> </span>
+                        </p>
+                    </div>
+                    <div class="teamDivider"></div>
+                    <img
+                        id="teamimg"
+                        class="teamPNGs"
+                        src="images/ourteam/team1.jpg"
+                    />
+                </div>
+            </div>
+        </section>
+        <section>
+            <div style="height: 1vh"></div>
         </section>
 
         <footer style="position: relative">
@@ -214,6 +206,6 @@
             </ul>
         </footer>
     </body>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="javascript/team.js"></script>
 </html>
