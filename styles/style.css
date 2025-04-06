@@ -1634,3 +1634,58 @@ div-exc {
     border: 1px solid white;
     min-height: 400px;
 }
+
+/*styling for partners.html*/
+
+.partnersHeader {
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(47, 52, 59); */
+}
+
+.partnersTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20vw;
+    z-index: 2;
+}
+
+.partnersTitle h1 {
+    font-size: 12vw;
+    text-align: center;
+    mix-blend-mode: overla;
+}
+
+.partnersTitleBG {
+    position: absolute;
+    height: 80dvh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(47, 52, 59);
+    margin-top: 50px;
+    overflow-x: auto;
+    gap: 1dvw;
+}
+.partnersTitleImage {
+    height: 85%;
+    width: 20dvw;
+    background-color: black;
+    flex: 0 0 auto;
+}
+
+.partnersTitleImage img {
+    width: 100%;
+}
+
+.partnersTitleImage:nth-child(odd) {
+    margin-bottom: 3%;
+}
+.partnersTitleImage:nth-child(even) {
+    margin-top: 3%;
+}
