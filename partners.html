@@ -1,8 +1,13 @@
 <!doctype html>
 <html lang="en" dir="ltr">
     <head>
-        <link rel="stylesheet" href="styles/style.css" />
         <link rel="shortcut icon" href="/whiteLogo.ico" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="styles/style.css" />
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -79,11 +84,15 @@
                                 >partners</a
                             >
                             <div id="dropdown-content">
-                                <a href="partners.html#past" class="dropcon"
-                                    >past partners</a
-                                >
-                                <a href="partners.html#current" class="dropcon"
+                                <a
+                                    href="partners.html#currentpartners"
+                                    class="dropcon"
                                     >current partners</a
+                                >
+                                <a
+                                    href="partners.html#pastpartners"
+                                    class="dropcon"
+                                    >past partners</a
                                 >
                             </div>
                         </div>
@@ -116,19 +125,149 @@
         />
 
         <section>
-            <div class="centre teamheader">
-                <h1>current partners</h1>
+            <div class="partnersHeader">
+                <div class="partnersTitleBG">
+                    <div class="partnersTitleImage">
+                        <img
+                            alt="current partners"
+                            src="images/partners/1.jpg"
+                        />
+                        <div class="partnersTitle">
+                            <h1>our</h1>
+                        </div>
+                    </div>
+                    <div class="partnersTitleImage">
+                        <img
+                            alt="current partners"
+                            src="images/partners/2.jpg"
+                        />
+                        <div class="partnersTitle">
+                            <h1>partners</h1>
+                        </div>
+                    </div>
+                    <div class="partnersTitleImage">
+                        <img
+                            alt="current partners"
+                            src="images/partners/3.jpg"
+                        />
+                        <div class="partnersTitle">
+                            <h1>our</h1>
+                        </div>
+                    </div>
+                    <div class="partnersTitleImage">
+                        <img
+                            alt="current partners"
+                            src="images/partners/4.jpg"
+                        />
+                        <div class="partnersTitle">
+                            <h1>partners</h1>
+                        </div>
+                    </div>
+                    <div class="partnersTitleImage">
+                        <img
+                            alt="current partners"
+                            src="images/partners/5.jpg"
+                        />
+                        <div class="partnersTitle">
+                            <h1>our</h1>
+                        </div>
+                    </div>
+                    <div class="partnersTitleImage">
+                        <img
+                            alt="current partners"
+                            src="images/partners/6.jpg"
+                        />
+                        <div class="partnersTitle">
+                            <h1>partners</h1>
+                        </div>
+                    </div>
+                    <div class="partnersTitleImage">
+                        <img
+                            alt="current partners"
+                            src="images/partners/7.jpg"
+                        />
+                        <div class="partnersTitle">
+                            <h1>our</h1>
+                        </div>
+                    </div>
+                    <div class="partnersTitleImage">
+                        <img
+                            alt="current partners"
+                            src="images/partners/1.jpg"
+                        />
+                        <div class="partnersTitle">
+                            <h1>partners</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="partnersitle">
+                    <h1></h1>
+                    <h1 style="margin-left: 60px">
+                        <br />
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <a name="currentpartners"> </a>
+        <section
+            style="display: flex; flex-direction: column; align-items: center"
+        >
+            <div class="partnerDivider"></div>
+            <div class="currentPartnersHeader">
+                <h2>
+                    current partners <br />
+                    with FABSOC
+                </h2>
+                <p>
+                    fabsoc collaborates with brands to create unique and
+                    engaging experiences for our members. Together we work on
+                    events and workshops to provide fashion forward individuals
+                    with expressive and creative opportunities
+                </p>
+            </div>
+            <div class="partnerDivider"></div>
+        </section>
+
+        <section style="display: flex; justify-content: center">
+            <div class="currentPartners">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="images/partners/roc.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/partners/reborne.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/partners/vogue.png" />
+                        </div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
         </section>
 
-        <section>
-            <div class="centre separator" id="teamWhiteLine">
-                <img src="images/whiteLine.png" alt="whiteline" />
+        <a name="pastpartners"></a>
+        <section
+            style="display: flex; flex-direction: column; align-items: center"
+        >
+            <div class="partnerDivider"></div>
+            <div class="pastPartnersHeader">
+                <h2>previously: <br /></h2>
+                <img src="images/whiteLogo.png" alt="fabsoc" />
+                <h2>X</h2>
             </div>
-        </section>
-
-        <section>
-            <div style="height: 270vh"></div>
+            <div class="partnerDivider"></div>
+            <div class="pastPartners"></div>
         </section>
 
         <footer style="position: relative">
@@ -184,5 +323,6 @@
         </footer>
     </body>
 
-    <script src="javascript/team.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="javascript/partners.js"></script>
 </html>
