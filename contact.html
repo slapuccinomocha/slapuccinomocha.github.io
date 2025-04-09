@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="shortcut icon" href="/whiteLogo.ico" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Events | Fashion and Beauty Society UNSW</title>
+    </head>
+    <body style="background-color: black">
+        <!-- SIDE BAR ACCESSED BY THE BURGER MENU LOCATED IN THE HEADER DIV (FOR SMALLER SCREENSIZES)  -->
+
+        <div id="sidebar" style="width: 0px">
+            <div class="black centre">
+                <div class="contents">
+                    <p class="contents-heading" style="padding-top: 10px">
+                        <b>FABSOC UNSW 2025</b>
+                    </p>
+                    <nav>
+                        <a
+                            class="contents-heading"
+                            href="index.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">home</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="team.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">our team</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="partners.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">partners</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="scrapbook.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">SS25</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="blog.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">blog</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="events.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">events</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="contact.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">contact</p></a
+                        >
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Sticky menu -->
+
+        <div id="sticky-menu">
+            <nav>
+                <ul>
+                    <li><a href="team.html">our team</a></li>
+                    <li>
+                        <div id="dropdown">
+                            <a
+                                href="partners.html"
+                                class=""
+                                id="dropdown-button"
+                                >partners</a
+                            >
+                            <div id="dropdown-content">
+                                <a
+                                    href="partners.html#currentpartners"
+                                    class="dropcon"
+                                    >current partners</a
+                                >
+                                <a
+                                    href="partners.html#pastpartners"
+                                    class="dropcon"
+                                    >past partners</a
+                                >
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html"
+                            ><img
+                                class="logo"
+                                src="images/whiteLogo.png"
+                                alt="FABSOC UNSW Logo"
+                            />
+                        </a>
+                    </li>
+                    <li><a href="scrapbook.html">SS25</a></li>
+                    <li><a  href="events.html">events</a></li>
+                    <li><a class="selected"href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- BUTTON TO ACCESS SIDE BAR (WILL HIDE ON SCREEN SIZES SMALLER THAN 1000px) -->
+
+        <input
+            type="image"
+            name="sidebar-icon"
+            id="sidebar-icon"
+            style="z-index: 100"
+            src="images/sidebar-icon.png"
+            onclick="sidebar_toggle()"
+        />
+
+        <section>
+            <div class="contactHeader">
+                <div class="contactScroller">
+                    <div class="contactInnerScroll">
+                        <svg viewBox="0 0 500 500">
+                          <path id="curve" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
+                          <text width="500">
+                            <textPath alignment-baseline="center" xlink:href="#curve">
+                              Dangerous Curves Ahead
+                            </textPath>
+                          </text>
+                        </svg><h1>* CONTACT US *</h1><h1>* CONTACT US *</h1><h1>* CONTACT US *</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="contactHeader">
+                <div class="contactForm">
+                    <h2>interested in working with us? fill this out and let's get to know you.</h2>
+                    <br style="clear: both;;">
+                    <form method="POST" class="contact">
+                        <div style="display: flex; flex-direction: row; gap: 30px;">
+                            <div class="contactName">
+                                <label for="fname">first name</label>
+                                <input name="fname"></input>
+                            </div>
+                            <div class="contactName">
+                                <label for="sname">last name</label>
+                                <input name="sname"></input>
+                            </div>
+                        </div>
+
+                        <label for="email">email</label>
+                        <input name="email"></input>
+                        <label for="message">message</label>
+                        <textarea placeholder="message" name="message"></textarea>
+                        <button class="submitContact">send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer style="position: relative">
+            <ul class="left-column">
+                <a href="team.html"><p class="footer-text">our team</p></a>
+                <br />
+                <a href="partners.html"><p class="footer-text">partners</p></a>
+                <br />
+                <a href="events.html"><p class="footer-text">events</p></a>
+                <br />
+                <a href="scrapbook.html"
+                    ><p class="footer-text">scrapbook</p></a
+                >
+                <br />
+                <a href="contact.html"><p class="footer-text">contact</p></a>
+            </ul>
+
+            <ul class="middle-column">
+                <a href="https://www.tiktok.com/@fabsocunsw"
+                    ><p class="footer-text">tiktok</p></a
+                >
+                <br />
+                <a href="https://www.facebook.com/fabsocunsw/"
+                    ><p class="footer-text">facebook</p></a
+                >
+                <br />
+                <a href="https://www.instagram.com/fabsocunsw/"
+                    ><p class="footer-text">instagram</p></a
+                >
+                <br />
+                <a href="https://www.youtube.com/fabsocunsw/"
+                    ><p class="footer-text">youtube</p></a
+                >
+                <br />
+                <a href="https://www.discord.com/fabsocunsw/"
+                    ><p class="footer-text">discord</p></a
+                >
+            </ul>
+
+            <ul class="right-column">
+                <a href="blog.html"><p class="footer-text">blog</p></a>
+                <br />
+                <a href="fit.html"><p class="footer-text">fit cusotmiser</p></a>
+                <br />
+                <a href="FAQ.html"><p class="footer-text">FAQ</p></a>
+                <br />
+                <a href="terms.html"><p class="footer-text">terms of use</p></a>
+                <br />
+                <a href="privacy.html"
+                    ><p class="footer-text">privacy policy</p></a
+                >
+            </ul>
+        </footer>
+    </body>
+
+    <script src="javascript/contact.js"></script>
+</html>
