@@ -138,6 +138,16 @@
         height: 50vh;
         min-width: 70vw;
     }
+    .currentPartnersHeader {
+        flex-direction: column;
+    }
+    .currentPartnersHeader h2 {
+        text-align: center;
+    }
+
+    .currentPartnersHeader p {
+        text-align: center;
+    }
 }
 
 /* For larger screen sizes (minimum width of 1000px) */
@@ -255,6 +265,16 @@
         height: 270px;
         min-width: 1000px;
     }
+    .currentPartnersHeader {
+        flex-direction: row;
+    }
+    .currentPartnersHeader h2 {
+        text-align: right;
+    }
+
+    .currentPartnersHeader p {
+        text-align: left;
+    }
 }
 
 /*Html, Body, Paragrpahs, Headinsgs, Header*/
@@ -341,6 +361,7 @@ a {
 button,
 input {
     outline: 0;
+    border: none;
 }
 
 header {
@@ -812,6 +833,7 @@ footer ul {
     height: 23px;
     padding: 5px 16px;
     position: absolute;
+    border: none;
     cursor: pointer;
     -webkit-transition: opacity 1s ease-in-out;
 }
@@ -1284,7 +1306,7 @@ h4 {
     opacity: 0;
     animation: fade 2s;
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
     font-weight: bold;
     padding: 0 30px 14vh 30px;
     text-align: center;
@@ -1306,7 +1328,7 @@ h4 {
     justify-content: center;
     align-items: center;
     animation: slide-up 2s;
-    animation-delay: 2.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 
@@ -1327,7 +1349,7 @@ h4 {
     justify-content: center;
     align-items: center;
     animation: slide-up 2s;
-    animation-delay: 2.5s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 
@@ -1657,17 +1679,16 @@ div-exc {
     display: flex;
     width: 100%;
     height: 70dvh;
-    opacity: 0;
+    opacity: 1;
+    font-weight: 900;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 20vw;
     z-index: 5;
     /* mix-blend-mode: exclusion; */
     background-color: rgba(0, 0, 0, 0.4);
-    animation: fade 1s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-    box-shadow: inset 0 0 10px rgb(47, 52, 59);
+    box-shadow: inset 0 0 20px rgb(47, 52, 59);
 }
 
 .partnersTitle {
@@ -1676,14 +1697,13 @@ div-exc {
     background-color: rgba(0, 0, 0, 0.5);
     height: 80%;
     overflow: hidden;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 300px;
 }
 
 .partnersTitle h1 {
-    font-size: 30pt;
     text-align: center;
     color: white;
 }
@@ -1691,17 +1711,32 @@ div-exc {
 .partnersTitleBG {
     position: absolute;
     height: 70dvh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: rgb(47, 52, 59);
-    overflow-x: auto;
+    max-width: 100%;
+    /* background-color: rgb(47, 52, 59); */
+    overflow-x: scroll;
     overflow-y: hidden;
-    gap: 20px;
     /* padding: 30px; */
     scrollbar-width: none;
     /* filter: blur(2px); */
+    webkit-mask: linear-gradient(
+        90deg,
+        transparent,
+        white 5%,
+        white 95%,
+        transparent
+    );
+    mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+}
+
+.innerPartners {
+    height: inherit;
+    min-width: 1000px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    animation: scroll 80s infinite linear;
 }
 
 .partnersTitleBG::-webkit-scrollbar {
@@ -1735,23 +1770,18 @@ div-exc {
 }
 .currentPartnersHeader {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     gap: 40px;
 }
 .currentPartnersHeader h2 {
-    text-align: right;
-    line-height: 60px;
     width: 20vw;
     flex: 0 0 auto;
 }
 
 .currentPartnersHeader p {
-    text-align: left;
-    font-size: 15pt;
-    width: 40vw;
+    max-width: 50vw;
     flex: 0 0 auto;
     font-weight: lighter;
 }
@@ -1773,12 +1803,13 @@ div-exc {
 }
 
 .swiper-slide {
-    background-color: rgb(47, 52, 59);
-    width: 40%;
+    background-color: #3a3f48;
+    display: flex;
+    align-items: center;
 }
 
 .swiper-slide img {
-    height: 100%;
+    /* rotate: 90deg; */
     width: 100%;
     object-fit: cover;
 }
@@ -1836,6 +1867,10 @@ div-exc {
     display: inline;
     padding-right: 30vw;
     font-weight: 900;
+}
+
+svg path {
+    display: inline;
 }
 
 .contactScroller {

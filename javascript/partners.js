@@ -1,3 +1,6 @@
+// get document vars
+const scrollers = document.querySelectorAll(".partnersTitleBG");
+
 // side menu toggle
 function sidebar_toggle() {
   var x = document.getElementById("sidebar");
@@ -13,6 +16,22 @@ function sidebar_toggle() {
   }
 }
 
+addAnimation();
+
+function addAnimation() {
+  console.log(scrollers);
+  scrollers.forEach((scroller) => {
+    const scrollerInner = scroller.querySelector(".innerPartners");
+    const scrollerCont = Array.from(scrollerInner.children);
+
+    scrollerCont.forEach((item) => {
+      const dupItem = item.cloneNode(true);
+      dupItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(dupItem);
+    });
+  });
+}
+
 // carousel swiper
 const swiper = new Swiper(".swiper", {
   // Optional parameters
@@ -25,7 +44,7 @@ const swiper = new Swiper(".swiper", {
     stretch: 0,
     depth: 300,
     modifier: 2,
-    slideShadows: true,
+    slideShadows: false,
     scale: 1,
   },
 

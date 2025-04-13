@@ -46,7 +46,7 @@ const exec = [
 const execIMG = ["Arsh", "Kavya", "Aivy", "Indira", "Falguni"];
 
 const digitals = ["Aryan", "Ashna", "Aarnav"];
-const media = ["John", "Charlie"];
+const media = ["John"];
 const marketing = ["Kai", "Ishaan", "Zoe"];
 const hr = ["Ashton", "Alex"];
 const partnerships = ["Mohnish", "Melina"];
