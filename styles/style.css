@@ -1654,6 +1654,10 @@ h4 {
     padding: 10px 0;
 }
 
+.eventsCardText a {
+    text-decoration: underline;
+}
+
 .eventsCardText h5 {
     font-family: "Courier New", Courier, monospace;
     padding: 6px 0px;

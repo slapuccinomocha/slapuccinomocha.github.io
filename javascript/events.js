@@ -47,6 +47,7 @@ function generate_popup(eventID) {
   const eventLoc = eventCard.querySelectorAll("h5")[0];
   const eventTime = eventCard.querySelectorAll("h5")[1];
   const eventPrice = eventCard.querySelectorAll("h5")[2];
+  const eventAnchor = eventCard.querySelector("a");
   const eventDesc = eventCard.querySelector("p");
 
   // name, location, price, event description from popupwindow
@@ -55,6 +56,7 @@ function generate_popup(eventID) {
   const popupLoc = popUpWindow.querySelectorAll("h5")[0];
   const popupTime = popUpWindow.querySelectorAll("h5")[1];
   const popupPrice = popUpWindow.querySelectorAll("h5")[2];
+  const popupAnchor = popUpWindow.querySelector("a");
   const popupDesc = popUpWindow.querySelector("p");
   console.log(popupDesc);
 
@@ -64,6 +66,8 @@ function generate_popup(eventID) {
   popupLoc.innerText = eventLoc.innerText;
   popupTime.innerText = eventTime.innerText;
   popupPrice.innerText = eventPrice.innerText;
+  popupAnchor.setAttribute("href", eventAnchor.href);
+  popupAnchor.innerText = eventAnchor.innerText;
   popupDesc.innerText = eventDesc.innerText;
 
   // prevent scrolling by overflowing hidden on body
