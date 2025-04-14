@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Events | Fashion and Beauty Society UNSW</title>
     </head>
-    <body style="background-color: black">
+    <body style="background-color: black" id="mainbody">
         <!-- SIDE BAR ACCESSED BY THE BURGER MENU LOCATED IN THE HEADER DIV (FOR SMALLER SCREENSIZES)  -->
 
         <div id="sidebar" style="width: 0px">
@@ -101,7 +101,19 @@
                             />
                         </a>
                     </li>
-                    <li><a href="scrapbook.html">SS25</a></li>
+                    <li>
+                        <div id="dropdown">
+                            <a
+                                href="scrapbook.html"
+                                class=""
+                                id="dropdown-button"
+                                >SS25</a
+                            >
+                            <div id="dropdown-content">
+                                <a href="blog.html" class="dropcon">blog</a>
+                            </div>
+                        </div>
+                    </li>
                     <li><a class="selected" href="events.html">events</a></li>
                     <li><a href="contact.html">contact</a></li>
                 </ul>
@@ -148,25 +160,77 @@
                 </div>
             </div>
             <div class="upcoming eventsMain">
-                <div class="eventsCard">
+                <div class="eventsCard" id="e1">
                     <div class="eventsCardImage">
                         <img
-                            src="images/landingBg.jpeg"
-                            alt="first image picture"
+                            src="https://cdn.filestackcontent.com/cache=expiry:max/resize=width:2400/output=format:webp,quality:40/compress/oTD0IfhXQTWPdyWM3s5g"
+                            alt="Y2K Pubcrawl Cover Photo"
                         />
                     </div>
                     <div class="eventsCardText">
                         <h2>
-                            KPOPSOC x FABSOC x HKSA x SSA x MSO Presents:
-                            PUBCRAWL
+                            KPOPSOC x FABSOC x HKSA x SSA x MSO: Y2K PUBCRAWL
                         </h2>
-                        <h5>&#8962; : TBC</h5>
-                        <h5>&#9719; : 19th April 2025</h5>
+                        <h5>&#8962; : Ni Hao Bar & Dining</h5>
+                        <h5>&#9719; : Saturday 26th April 2025: 7pm - 11pm</h5>
                         <h5>&#36; : $10 per pp</h5>
+                        <p>Ready to end Term 1 with a 💥BANG💥?
+
+                        UNSW KpopSoc, FABSOC, HKSA, SSA, and MSO have collaborated to present our 🤩 Y2K PUBCRAWL 🤩!
+
+                        Join us for a 🕰️ BLAST TO THE PAST 🕰️ as we have an epic night of FUN and party like it's the year 2000 🎊! Enjoy free entry 💃 and special discounts 💸 at FOUR awesome venues as we travel through the Sydney CBD.
+
+                        Be sure not to miss out if you don't want CRAZY FOMO 🥲!!
+
+                        ———-——————- DETAILS ———————————
+
+                        🗓️ DATE: 26/04/25
+
+                        ⏰ TIME: 7pm - late
+
+                        ‼️ ‼️ TICKET RELEASE ‼️ ‼️
+
+                        * [April 8th, Tuesday @ 7pm]  Early Bird: $6
+
+                        * [April 15th, Tuesday @ 7pm] General Sale: $7
+
+                        * [April 22nd, Tuesday @ 7pm] Final Sale: $8
+
+                        ———- BAR ROUTE/ TIMES & LOCATIONS —————
+
+                        - NiHao Bar | 7 - 8pm
+
+                        - Maloney's Hotel | 8 - 9pm
+
+                        - Scary Canary | 9 - 10pm
+
+                        - PANDA | 10pm - late
+
+                        ———-—————— SPECIAL DEALS ———————————
+
+                        NiHao Bar: 10% off all full-priced items, $7 House Drinks
+
+                        Maloney's Hotel: Free drink
+
+                        Scary Canary: Free Scary Shot
+
+                        PANDA: Free entry
+
+                        ———-—————— DRESS CODE 👗 ———————————
+
+                        Dress like it's the year 2000! 🕺
+
+                        ***IMPORTANT INFORMATION***
+
+                        - Please don’t forget to bring your IDs 🪪 as this event is strictly 18+. 🔞
+
+                        - NO refunds policy 🚨 will be reinforced, however, ticket transfers amongst attendees will be allowed.
+
+                        - KPOPSOC x FABSOC x HKSA x SSA x MSO are not liable nor responsible for any ticketing transfer issues in this process. 😌</p>
                     </div>
                     <div class="eventsButton">
                         <a
-                            ><button type="button" name="eventButton">
+                            ><button type="button" name="eventButton" onclick="generate_popup('#e1')">
                                 <img
                                     src="images/downarrow.png"
                                     alt="arrow"
@@ -222,6 +286,7 @@
                 </div>
             </div>
         </section>
+
         <section style="background-color: black">
             <div class="flowerHeader">
                 <div class="eventsTitleImages">
@@ -292,7 +357,30 @@
                 </div>
             </div>
         </section>
+        <div id="eventsPopUpFader">
+            <div class="eventsPopUpMain">
+                <div class="eventsCardText"><input
+                    type="image"
+                    name="popup-close"
+                    id="popup-close"
+                    style="z-index: 100"
+                    src="images/exit-icon.png"
+                    onclick="close_popup()"
+                /></div>
+                <div class="eventsPopUpImage">
 
+                    <img src="" alt="imge1" />
+                </div>
+                <div class="eventsCardText""><h2>Event name</h2>
+                <h5>&#8962; : Location</h5>
+                <h5>&#9719; : Time</h5>
+                <h5>&#36; : Price</h5>
+                <div class="partnerDivider"></div>
+                <p> Event Description
+                </p></div>
+                <div class="SignUp"></div>
+            </div>
+        </div>
         <footer style="position: relative">
             <ul class="left-column">
                 <a href="team.html"><p class="footer-text">our team</p></a>
