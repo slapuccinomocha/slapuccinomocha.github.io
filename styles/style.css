@@ -401,6 +401,7 @@ footer {
     letter-spacing: 2px;
     font-stretch: extra-condensed;
     z-index: 1;
+    bottom: 0px;
 }
 
 footer ul {
@@ -1944,7 +1945,7 @@ h4 {
     background-image: url("../images/cherryblossom.jpg");
     background-attachment:;
     background-blend-mode: darken;
-    background-size: 180vh;
+    background-size: 40vw;
 }
 .contactHeader {
     display: flex;
