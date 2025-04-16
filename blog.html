@@ -1,0 +1,264 @@
+<html>
+    <!-- HEAD PART FOR LINKING STYLE SHEETS AND TAB HEADER -->
+
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H70M05BNRR"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-H70M05BNRR');
+        </script>
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="shortcut icon" href="/whiteLogo.ico" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog | Fashion and Beauty Society UNSW</title>
+    </head>
+
+    <!-- BODY PART FOR THE ACTUAL PAGE -->
+
+    <body>
+        <!-- SIDE BAR ACCESSED BY THE BURGER MENU LOCATED IN THE HEADER DIV (FOR SMALLER SCREENSIZES)  -->
+
+        <div id="sidebar" style="width: 0px">
+            <div class="black centre">
+                <div class="contents">
+                    <p class="contents-heading" style="padding-top: 10px">
+                        <b>FABSOC UNSW 2025</b>
+                    </p>
+                    <nav>
+                        <a
+                            class="contents-heading"
+                            href="index.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">home</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="team.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">our team</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="partners.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">partners</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="scrapbook.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">SS25</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="blog.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">blog</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="events.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">events</p></a
+                        >
+                        <a
+                            class="contents-text"
+                            href="contact.html"
+                            onclick="sidebar_toggle()"
+                            ><p class="contents-text">contact</p></a
+                        >
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky menu / navigation bar that remains at the top of the page for larger screens -->
+
+        <div id="sticky-menu">
+            <nav>
+                <ul>
+                    <li><a href="team.html">our team</a></li>
+                    <li>
+                        <div id="dropdown">
+                            <a
+                                href="partners.html"
+                                class=""
+                                id="dropdown-button"
+                                >partners</a
+                            >
+                            <div id="dropdown-content">
+                                <a
+                                    href="partners.html#currentpartners"
+                                    class="dropcon"
+                                    >current partners</a
+                                >
+                                <a
+                                    href="partners.html#pastpartners"
+                                    class="dropcon"
+                                    >past partners</a
+                                >
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html" class="selected"
+                            ><img
+                                class="logo"
+                                src="images/whiteLogo.png"
+                                alt="FABSOC UNSW Logo"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <div id="dropdown">
+                            <a
+                                href="scrapbook.html"
+                                class=""
+                                id="dropdown-button"
+                                >SS25</a
+                            >
+                            <div id="dropdown-content">
+                                <a href="blog.html" class="dropcon">blog</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="events.html">events</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- BUTTON TO ACCESS SIDE BAR (WILL HIDE ON SCREEN SIZES SMALLER THAN 1000px) -->
+
+        <input
+            type="image"
+            name="sidebar-icon"
+            id="sidebar-icon"
+            style="z-index: 100"
+            src="images/sidebar-icon.png"
+            onclick="sidebar_toggle()"
+        />
+        <header class="" id="" style="">
+            <div class="blogHeader">
+                <h1>our blog</h1>
+            </div>
+            <a name="Landing"></a>
+        </header>
+
+
+
+        <section class="">
+            <div class="blogLayout">
+                <div class="blogCard">
+                    <div class="blogIMG">
+                        <img src="images/blog/blog1/blog1.jpg" alt="first blog thumbnail">
+                    </div>
+                    <div class="blogBrief">
+                        <h2>Blog Title</h2>
+                        <h5>Blog Description Brief</h5>
+                    </div>
+                    <div class="readButton">
+                        <a href="blogs/blog1.html"><button>Read Blog</button></a>
+                    </div>
+                </div>
+                <div class="blogCard">
+                    <div class="blogIMG">
+                        <img src="images/blog/blog1/blog1.jpg" alt="first blog thumbnail">
+                    </div>
+                    <div class="blogBrief">
+                        <h2>Blog Title</h2>
+                        <h5>Blog Description Brief</h5>
+                    </div>
+                    <div class="readButton">
+                        <a href="blogs/blog1.html"><button>Read Blog</button></a>
+                    </div>
+                </div>
+                <div class="blogCard">
+                    <div class="blogIMG">
+                        <img src="images/blog/blog1/blog1.jpg" alt="first blog thumbnail">
+                    </div>
+                    <div class="blogBrief">
+                        <h2>Blog Title</h2>
+                        <h5>Blog Description Brief</h5>
+                    </div>
+                    <div class="readButton">
+                        <a href="blogs/blog1.html"><button>Read Blog</button></a>
+                    </div>
+                </div>
+                <div class="blogCard">
+                    <div class="blogIMG">
+                        <img src="images/blog/blog1/blog1.jpg" alt="first blog thumbnail">
+                    </div>
+                    <div class="blogBrief">
+                        <h2>Blog Title</h2>
+                        <h5>Blog Description Brief</h5>
+                    </div>
+                    <div class="readButton">
+                        <a href="blogs/blog1.html"><button>Read Blog</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer style="position: relative;">
+            <ul class="left-column">
+                <a href="team.html"><p class="footer-text">our team</p></a>
+                <br />
+                <a href="partners.html"><p class="footer-text">partners</p></a>
+                <br />
+                <a href="events.html"><p class="footer-text">events</p></a>
+                <br />
+                <a href="scrapbook.html"
+                    ><p class="footer-text">scrapbook</p></a
+                >
+                <br />
+                <a href="contact.html"><p class="footer-text">contact</p></a>
+            </ul>
+
+            <ul class="middle-column">
+                <a href="https://www.tiktok.com/@fabsocunsw"
+                    ><p class="footer-text">tiktok</p></a
+                >
+                <br />
+                <a href="https://www.facebook.com/fabsocunsw/"
+                    ><p class="footer-text">facebook</p></a
+                >
+                <br />
+                <a href="https://www.instagram.com/fabsocunsw/"
+                    ><p class="footer-text">instagram</p></a
+                >
+                <br />
+                <a href="https://www.youtube.com/fabsocunsw/"
+                    ><p class="footer-text">youtube</p></a
+                >
+                <br />
+                <a href="https://www.discord.com/fabsocunsw/"
+                    ><p class="footer-text">discord</p></a
+                >
+            </ul>
+
+            <ul class="right-column">
+                <a href="blog.html""><p class="footer-text">blog</p></a>
+                <br />
+                <a href="fit.html"><p class="footer-text">fit cusotmiser</p></a>
+                <br />
+                <a href="FAQ.html"><p class="footer-text">FAQ</p></a>
+                <br />
+                <a href="terms.html"><p class="footer-text">terms of use</p></a>
+                <br />
+                <a href="privacy.html"
+                    ><p class="footer-text">privacy policy</p></a
+                >
+            </ul>
+
+        </footer>
+        <a name="Reveal"></a>
+
+        <script src="javascript/main.js"></script>
+    </body>
+</html>
