@@ -163,8 +163,14 @@
     .currentPartnersHeader p {
         text-align: center;
     }
+    .pastPartnersIMG {
+        height: 50px;
+    }
     .blogText {
         width: 100%;
+    }
+    .blogCard {
+        width: 90%;
     }
 }
 
@@ -296,8 +302,14 @@
     .currentPartnersHeader p {
         text-align: left;
     }
+    .pastPartnersIMG {
+        height: 70px;
+    }
     .blogText {
         width: 60%;
+    }
+    .blogCard {
+        width: 24%;
     }
 }
 
@@ -1971,9 +1983,8 @@ h4 {
 
 .pastPartners {
     width: 100%;
-    height: 40dvh;
+    height: 500px;
     display: flex;
-    flex-direction: row;
     background-color: rgb(47, 52, 59); /*rgb(47, 52, 59)*/
     justify-content: space-around;
     padding: 6vh 0;
@@ -1982,7 +1993,6 @@ h4 {
 
 .pastPartnersIMG {
     /* width: 20vw; */
-    height: 70px;
     object-fit: contain;
 }
 
@@ -2019,8 +2029,8 @@ h4 {
     animation-fill-mode: forwards;
     animation-delay: 2s;
     display: inline;
-    padding-right: 30vw;
     font-weight: 900;
+    text-align: center;
 }
 
 svg path {
@@ -2136,10 +2146,9 @@ input {
 
 .blogLayout {
     width: 100%;
-    height: 150dvh;
     display: flex;
-    flex-wrap: row;
-    align-items: initial;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: center;
     background-color: #ffffff;
     gap: 10px;
@@ -2156,7 +2165,6 @@ input {
     border: 2px solid black;
     background-color: transparent;
     height: 600px;
-    width: 24%;
     padding: 10px 10px;
     color: black;
     border-radius: 5px;
@@ -2164,8 +2172,10 @@ input {
 
 .blogIMG {
     min-height: 30%;
-    width: 400%;
+    width: 100%;
     object-fit: contain;
+    text-align: center;
+    overflow-y: hidden;
 }
 
 .blogIMG img {
@@ -2211,7 +2221,7 @@ input {
 .blogMain {
     background-color:;
     background-image: url("../blogs/bg.jpg");
-    min-height: 100dvh;
+    min-height: auto;
     width: 100dvw;
     color: black;
     display: flex;
@@ -2226,6 +2236,18 @@ input {
     background-color: white;
     height: 80vh;
     overflow-y: scroll;
+}
+
+.blog1Header {
+    top: 0;
+    left: 0;
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+
+.blog1Header img {
+    width: 100%;
 }
 
 .blog1 {
@@ -2254,7 +2276,7 @@ input {
 }
 
 .blog1IMG img {
-    width: 80%;
+    height: 80%;
     margin: 30px 0 30px 0;
 }
 
@@ -2279,4 +2301,9 @@ input {
     position: absolute;
     top: 20px;
     left: 20px;
+    transition: 500ms;
+}
+
+#back-to-blog:hover {
+    filter: invert(1);
 }
