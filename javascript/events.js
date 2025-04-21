@@ -86,3 +86,7 @@ function close_popup() {
   mainbody.style.overflow = "initial";
   popUpWindow.style.display = "none";
 }
+$("footer h2").on("click", function () {
+  $(this).next("ul").toggleClass("active");
+  $("footer h2").toggleClass("footerDrop");
+});

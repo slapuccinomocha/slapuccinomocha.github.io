@@ -43,7 +43,7 @@ let callback = (entries, observer) => {
       scrapbookLink.style.opacity = 0;
       setTimeout(function () {
         joinButton.style.opacity = 0;
-      }, 0000);
+      }, 0);
       console.log(fabsocTitle.style.opacity);
     } else {
       fabsocTitle.style.opacity = 1;
@@ -61,3 +61,8 @@ let callback = (entries, observer) => {
 const observer = new IntersectionObserver(callback);
 const observed = document.getElementById("fblogo");
 observer.observe(observed);
+
+$("footer h2").on("click", function () {
+  $(this).next("ul").toggleClass("active");
+  $("footer h2").toggleClass("footerDrop");
+});

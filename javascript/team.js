@@ -224,3 +224,8 @@ $(window).scroll(function (event) {
   }
   lastScrollTop = st;
 });
+
+$("footer h2").on("click", function () {
+  $(this).next("ul").toggleClass("active");
+  $("footer h2").toggleClass("footerDrop");
+});

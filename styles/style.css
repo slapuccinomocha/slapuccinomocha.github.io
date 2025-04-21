@@ -24,6 +24,59 @@
     src: url("../fonts/DkCrayonCrumble.ttf");
 }
 
+/*Animations*/
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        top: -50px;
+    }
+    to {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        margin-top: 9dvh;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0dvh;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        margin-top: -15px;
+    }
+    to {
+        margin-top: 1px;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        opacity: 0;
+        right: 0px;
+    }
+    to {
+        opacity: 1;
+        right: 20px;
+    }
+}
+
 /*Media Inqueries to be responsive to screen size*/
 
 /* For smaller screen sizes (maximum width of 1000px) */
@@ -88,11 +141,34 @@
     }
 
     footer {
-        position: absolute;
+        position: relative;
         flex-direction: column;
         justify-content: space-between;
-        height: 70dvh;
+        height: 30dvh;
         width: 100%;
+    }
+
+    footer ul {
+        display: none;
+        padding: 10px 0 30px 0;
+        margin: 0;
+    }
+
+    footer h2 {
+        display: block;
+        text-align: left;
+        padding: 10px 0;
+        border-bottom: 2px solid white;
+        width: 80%;
+        margin: 10px 0;
+    }
+    footer h2::after {
+        content: "+";
+        float: right;
+    }
+
+    footer h2:hover {
+        cursor: pointer;
     }
 
     .left-column p {
@@ -172,6 +248,9 @@
     .blogCard {
         width: 90%;
     }
+    .blog1IMG {
+        max-width: 100%;
+    }
 }
 
 /* For larger screen sizes (minimum width of 1000px) */
@@ -233,6 +312,12 @@
         flex-direction: row;
         justify-content: space-around;
         height: 33vh;
+        display: table-cell;
+    }
+
+    footer ul {
+        margin: 0;
+        padding: 0;
     }
 
     .left-column p {
@@ -306,10 +391,16 @@
         height: 70px;
     }
     .blogText {
-        width: 60%;
+        width: 80%;
     }
     .blogCard {
         width: 24%;
+    }
+    .blog1IMG {
+        max-width: 40%;
+    }
+    footer h2 {
+        display: none;
     }
 }
 
@@ -429,12 +520,19 @@ footer {
     font-stretch: extra-condensed;
     z-index: 1;
     bottom: 0px;
+    /* position: relative; */
 }
 
 footer ul {
-    display: table-cell;
     vertical-align: middle;
-    padding: 0;
+    list-style: none;
+    width: 200px;
+}
+.active {
+    display: table-cell;
+}
+.footerdrop::after {
+    content: "-";
 }
 
 /*Footer*/
@@ -963,59 +1061,6 @@ footer ul {
     text-decoration-color: white;
 }
 
-/*Animations*/
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-        top: -50px;
-    }
-    to {
-        opacity: 1;
-        top: 0px;
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slide-up {
-    from {
-        margin-top: 9dvh;
-        opacity: 0;
-    }
-    to {
-        margin-top: 0dvh;
-        opacity: 1;
-    }
-}
-
-@keyframes slide-down {
-    from {
-        margin-top: -15px;
-    }
-    to {
-        margin-top: 1px;
-    }
-}
-
-@keyframes slide-right {
-    from {
-        opacity: 0;
-        right: 0px;
-    }
-    to {
-        opacity: 1;
-        right: 20px;
-    }
-}
-
 /*Contact form*/
 .contact {
     border-radius: 5px;
@@ -1393,7 +1438,7 @@ h4 {
     position: relative;
     display: flex;
     width: 100%;
-    height: 1100dvh;
+    height: 1300dvh;
     border-top: 3px solid white;
 }
 
@@ -2077,6 +2122,7 @@ svg path {
     align-items: flex-start;
     gap: 10px;
     font-family: Playfair;
+    max-width: 80%;
 }
 
 .contactForm {
@@ -2221,21 +2267,25 @@ input {
 .blogMain {
     background-color:;
     background-image: url("../blogs/bg.jpg");
-    min-height: auto;
+    background-size: 100%;
+    min-height: 110dvh;
     width: 100dvw;
     color: black;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    padding-bottom: 100px;
+    margin-top: 1px;
 }
 
 .blogText {
     padding: 50px 2vw 50px 2vw;
     margin-top: 8vh;
     background-color: white;
-    height: 80vh;
+    height: 60vh;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    transition: all 500ms;
 }
 
 .blog1Header {
@@ -2251,32 +2301,41 @@ input {
 }
 
 .blog1 {
-    background-color: #fff7ed;
+    background-color: rgb(226, 213, 202);
 }
 
 .blog1 p {
     padding-bottom: 30px;
     padding-top: 0px;
-    margin-top: 0px;
+    margin: 5vh 30px;
+    font-size: 1em;
 }
 
 .blog1 h1 {
-    margin-top: 20px;
-    padding: 10px inherit;
+    margin-top: 12%;
+    font-size: 2.5em;
+    padding: 10px;
+    text-align: center;
+    transition: all 500ms;
+}
+
+.blog1 h4 {
+    margin-bottom: 20%;
+    text-align: center;
+    padding: 10px;
+    font-weight: normal;
+    font-style: italic;
+    transition: all 500ms;
 }
 
 .blog1IMG {
-    width: 30vw;
     object-fit: contain;
-    border: 2px solid black;
-    float: left;
-    margin: 20px;
     position: relative;
     text-align: center;
 }
 
 .blog1IMG img {
-    height: 80%;
+    width: 80%;
     margin: 30px 0 30px 0;
 }
 
@@ -2292,6 +2351,30 @@ input {
 
 .blogwrap {
     text-wrap:;
+}
+
+.blog1Standalone {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    margin: 10% 0;
+    /* gap: 5vw; */
+    color: rgb(24, 74, 173);
+    flex-wrap: wrap;
+}
+
+.blog1Standalone img {
+    margin: 20px 5px;
+    padding: 0;
+    text-align: center;
+    /* width: 20%; */
+}
+
+.blog1Standalone h2 {
+    margin: 3vh 0;
+    text-align: center;
+    font-size: 1em;
 }
 
 #back-to-blog {
