@@ -977,6 +977,7 @@ footer ul {
     border: none;
     cursor: pointer;
     -webkit-transition: opacity 1s ease-in-out;
+    filter: invert(0.5);
 }
 #sidebar-icon:hover {
     color: black;
