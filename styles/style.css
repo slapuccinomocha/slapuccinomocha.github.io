@@ -2371,6 +2371,7 @@ input {
 }
 
 .blog1Standalone img {
+    width: 60%;
     margin: 20px 5px;
     padding: 0;
     text-align: center;
@@ -2380,7 +2381,7 @@ input {
 .blog1Standalone h2 {
     margin: 3vh 0;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
 #back-to-blog {
