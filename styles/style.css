@@ -251,6 +251,10 @@
     .blog1IMG {
         max-width: 100%;
     }
+    .eventsPopUpMain {
+        width: 80%;
+        height: 80vh;
+    }
 }
 
 /* For larger screen sizes (minimum width of 1000px) */
@@ -401,6 +405,10 @@
     }
     footer h2 {
         display: none;
+    }
+    .eventsPopUpMain {
+        width: 50vw;
+        height: 70vh;
     }
 }
 
@@ -1807,8 +1815,6 @@ h4 {
     align-items: center;
     padding: 18px;
     border: 1px solid white;
-    height: 70vh;
-    width: 50vw;
     background-color: black;
     text-align: left;
     overflow-y: scroll;
