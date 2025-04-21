@@ -162,7 +162,7 @@
         width: 80%;
         margin: 10px 0;
     }
-    footer h2::after {
+    footer h2:after {
         content: "+";
         float: right;
     }
@@ -539,7 +539,7 @@ footer ul {
 .active {
     display: table-cell;
 }
-.footerdrop::after {
+.footerdrop:after {
     content: "-";
 }
 
