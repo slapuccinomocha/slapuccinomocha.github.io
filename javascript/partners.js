@@ -62,5 +62,5 @@ const swiper = new Swiper(".swiper", {
 
 $("footer h2").on("click", function () {
   $(this).next("ul").toggleClass("active");
-  $("footer h2").toggleClass("footerdrop");
+  $(this).closest("h2").toggleClass("footerdrop");
 });

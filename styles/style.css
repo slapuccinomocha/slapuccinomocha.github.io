@@ -969,20 +969,19 @@ footer ul {
     top: 4vh;
     left: 4vw;
     margin: 0 auto;
-    padding: auto;
-    width: 27px;
-    height: 23px;
-    padding: 5px 16px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    border: none;
     cursor: pointer;
-    -webkit-transition: opacity 1s ease-in-out;
-    filter: invert(0.5);
+    -webkit-transition: all 0.3s;
+    background-color: black;
+    border: 2px solid white;
+    padding: 10px;
 }
 #sidebar-icon:hover {
     color: black;
     opacity: 0.5;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 #exit-icon {
@@ -2061,18 +2060,12 @@ h4 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100dvh;
+    min-height: 100dvh;
     background-color: rgba(0, 0, 0, 0.8);
     background-image: url("../images/cherryblossom.jpg");
     background-attachment:;
     background-blend-mode: darken;
     background-size: 40vw;
-}
-.contactHeader {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
 }
 .contactHeader h1 {
     letter-spacing: 10px;
@@ -2083,6 +2076,7 @@ h4 {
     display: inline;
     font-weight: 900;
     text-align: center;
+    margin: 3vh 3vw;
 }
 
 svg path {
@@ -2142,8 +2136,8 @@ svg path {
 .contactForm h2 {
     text-align: center;
     align-self: center;
-    font-size: 15pt;
-    margin: 5vh 0;
+    font-size: 1.2em;
+    margin: 5vh 3vw;
     font-weight: normal;
 }
 

@@ -34,3 +34,8 @@ let callback = (entries, observer) => {
 };
 const observer = new IntersectionObserver(callback);
 observer.observe(readMore);
+
+$("footer h2").on("click", function () {
+  $(this).next("ul").toggleClass("active");
+  $(this).closest("h2").toggleClass("footerdrop");
+});
