@@ -694,6 +694,7 @@ footer ul {
     text-align: right;
     font-family: Playfair;
     font-style: italic;
+    text-decoration: underline;
 }
 
 #joinButton:hover {
