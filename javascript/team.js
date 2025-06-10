@@ -38,20 +38,18 @@ const exec = [
   "President | VPI: Arsh",
   "Treasurer: Kavya",
   "VP Externals: Aivy",
-  "VP Creatives: Indira",
-  "VP Marketing: Falguni",
 ];
 
 // array just for names (when changing src for IMGs)
-const execIMG = ["Arsh", "Kavya", "Aivy", "Indira", "Falguni"];
+const execIMG = ["Arsh", "Kavya", "Aivy"];
 
 const digitals = ["Aryan", "Ashna", "Aarnav"];
-const media = ["John"];
+const media = ["John", "Akshaan"];
 const marketing = ["Kai", "Ishaan", "Zoe"];
 const hr = ["Ashton", "Alex"];
-const partnerships = ["Mohnish", "Melina"];
-const events = ["Stephen", "Roop", "Jaskirat"];
-const operations = ["Kalvin", "Neera"];
+const partnerships = ["Daniel", "Melina"];
+const events = ["Stephen", "Roop", "Sarah"];
+const operations = ["Kalvin", "Jaskirat"];
 
 // Director array to hold each port, (nested)
 const directorArray = [
