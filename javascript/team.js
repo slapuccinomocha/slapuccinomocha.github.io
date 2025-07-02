@@ -44,12 +44,12 @@ const exec = [
 const execIMG = ["Arsh", "Kavya", "Aivy"];
 
 const digitals = ["Aryan", "Ashna", "Aarnav"];
-const media = ["John", "Akshaan"];
+const media = ["John", "Akshan"];
 const marketing = ["Kai", "Ishaan", "Zoe"];
 const hr = ["Ashton", "Alex"];
 const partnerships = ["Daniel", "Melina"];
 const events = ["Stephen", "Roop", "Sarah"];
-const operations = ["Kalvin", "Jaskirat"];
+const operations = ["Jaskirat"];
 
 // Director array to hold each port, (nested)
 const directorArray = [
