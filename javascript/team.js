@@ -38,45 +38,27 @@ const exec = [
   "President | VPI: Arsh",
   "Treasurer: Kavya",
   "VP Externals: Aivy",
+  "VP Communications: Aryan",
+  "VP Communications: Ishaan",
 ];
 
 // array just for names (when changing src for IMGs)
-const execIMG = ["Arsh", "Kavya", "Aivy"];
+const execIMG = ["Arsh", "Kavya", "Aivy", "Aryan", "Ishaan"];
 
-const digitals = ["Aryan", "Ashna", "Aarnav"];
-const media = ["John", "Akshan"];
-const marketing = ["Kai", "Ishaan", "Zoe"];
+const digitals = ["Aarnav", "Ashna", "Zoe"];
+const media = ["John", "Akshan", "Kai"];
 const hr = ["Ashton", "Alex"];
 const partnerships = ["Daniel", "Melina"];
 const events = ["Stephen", "Roop", "Sarah"];
-const operations = ["Jaskirat"];
 
 // Director array to hold each port, (nested)
-const directorArray = [
-  exec,
-  digitals,
-  media,
-  marketing,
-  hr,
-  partnerships,
-  events,
-  operations,
-];
+const directorArray = [exec, digitals, media, hr, partnerships, events];
 
 // array for all directors as one non-nested array
 const fullteam = directorArray.flat();
 
 // array for
-const fullteamIMG = [
-  execIMG,
-  digitals,
-  media,
-  marketing,
-  hr,
-  partnerships,
-  events,
-  operations,
-].flat();
+const fullteamIMG = [execIMG, digitals, media, hr, partnerships, events].flat();
 
 // adjust name scroller based on scrolll position
 function nameAdjust() {
