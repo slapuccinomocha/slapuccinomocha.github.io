@@ -18,49 +18,57 @@ for (var i = 1; i <= 5; i++) {
 }
 var offset = 1000;
 
-// index that holds the current director
+// index that holds the current director (22 total)
 var dirIndex = Math.floor((window.scrollY - offset) / 200 + 0);
 
 // current ports
 const portArray = [
   "exec team: ",
-  "digitals: ",
-  "media team: ",
-  "marketing: ",
+  "creatives: ",
   "hr: ",
   "partnerships: ",
   "events: ",
-  "operations: ",
 ];
 
 // array to hold positions + names
 const exec = [
-  "President | VPI: Arsh",
-  "Treasurer: Kavya",
-  "VP Externals: Aivy",
-  "VP Communications: Aryan",
-  "VP Communications: Ishaan",
+  "President: Kavya",
+  "Treasurer: Melina",
+  "VP Externals: Daniel Li",
+  "VP Internals: Ishaan",
+  "VP Creatives: Akshan",
+  "Arc Delegate: Sarah",
+  "Welfare Officer: Aarnav",
+  "Secretary: Aryan",
 ];
 
 // array just for names (when changing src for IMGs)
-const execIMG = ["Arsh", "Kavya", "Aivy", "Aryan", "Ishaan"];
+const execIMG = [
+  "Kavya",
+  "Melina",
+  "Daniel",
+  "Ishaan",
+  "Akshan",
+  "Sarah",
+  "Aarnav",
+  "Aryan",
+];
 
-const digitals = ["Aarnav", "Ashna", "Zoe"];
-const media = ["John", "Akshan", "Kai"];
-const hr = ["Ashton", "Alex"];
-const partnerships = ["Daniel", "Melina"];
-const events = ["Stephen", "Roop", "Sarah"];
+const creatives = ["Ryan", "Diya", "Eric", "Tamzid", "YiRanne"];
+const hr = ["Tia", "Kelly", "Stephanie"];
+const partnerships = ["Jason", "Audrey", "Angus"];
+const events = ["Tara", "Bhargav", "Alex"];
 
 // Director array to hold each port, (nested)
-const directorArray = [exec, digitals, media, hr, partnerships, events];
+const directorArray = [exec, creatives, hr, partnerships, events];
 
 // array for all directors as one non-nested array
 const fullteam = directorArray.flat();
 
 // array for
-const fullteamIMG = [execIMG, digitals, media, hr, partnerships, events].flat();
+const fullteamIMG = [execIMG, creatives, hr, partnerships, events].flat();
 
-// adjust name scroller based on scrolll position
+// adjust name scroller based on scroll position
 function nameAdjust() {
   if (lines.length >= 5) {
     for (var i = 0; i < 5; i++) {
@@ -109,10 +117,9 @@ const throttle = (fn, delay) => {
 
 // scroll to view directors
 function directorScroll() {
-  if (window.scrollY > offset) {
+  if (window.scrollY) {
     // Ensures each portfolio switches every 1000 pixels scrolled after 800 pixels
-    const portIndex = Math.floor((window.scrollY - offset) / 1000);
-
+    const portIndex = Math.floor((window.scrollY - offset) / 1600);
     // total number of directors we have scrolled past
     var sum = 0;
     for (var i = 0; i < portIndex; i++) {
@@ -121,17 +128,19 @@ function directorScroll() {
 
     // selected director assignment
     console.log(dirIndex);
+    console.log(window.scrollY);
     var checker = 0;
     checker = Math.floor(
-      (window.scrollY - (offset + portIndex * 1000)) /
-        (1000 / directorArray[portIndex].length) +
+      (window.scrollY - (offset + portIndex * 1600)) /
+        (1600 / directorArray[portIndex].length) +
         sum,
     );
+    nameAdjust();
 
     if (dirIndex != checker) {
       dirIndex = Math.floor(
-        (window.scrollY - (offset + portIndex * 1000)) /
-          (1000 / directorArray[portIndex].length) +
+        (window.scrollY - (offset + portIndex * 1600)) /
+          (1600 / directorArray[portIndex].length) +
           sum,
       );
       nameAdjust();
@@ -145,7 +154,7 @@ function directorScroll() {
     // allocate each line of text to a name and fade between names
 
     // allocate image to name.jpg
-    teamIMG.src = "./images/ourteam/" + fullteamIMG[dirIndex] + ".jpg";
+    teamIMG.src = "./images/ourteam/2026/" + fullteamIMG[dirIndex] + ".jpg";
   }
 }
 

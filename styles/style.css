@@ -1406,7 +1406,7 @@ h4 {
     height: 100dvh;
     width: 100%;
     color: white;
-    background-image: url("../images/ourteam/mainTeam2.png");
+    background-image: url("../images/ourteam/2025/mainTeam2.png");
     background-attachment: scroll;
     background-origin: padding-box;
     background-size: 200%;
@@ -1427,7 +1427,7 @@ h4 {
     height: 100dvh;
     width: 100%;
     color: white;
-    background-image: url("../images/ourteam/mainTeam2.png");
+    background-image: url("../images/ourteam/2025/mainTeam2.png");
     background-attachment: scroll;
     background-origin: padding-box;
     background-size: 200%;
@@ -2064,7 +2064,6 @@ h4 {
     min-height: 100dvh;
     background-color: rgba(0, 0, 0, 0.8);
     background-image: url("../images/cherryblossom.jpg");
-    background-attachment:;
     background-blend-mode: darken;
     background-size: 40vw;
 }
@@ -2267,7 +2266,6 @@ input {
 
 /* styling for first blog*/
 .blogMain {
-    background-color:;
     background-image: url("../blogs/bg.jpg");
     background-size: 100%;
     min-height: 110dvh;
@@ -2352,7 +2350,7 @@ input {
 }
 
 .blogwrap {
-    text-wrap:;
+    text-wrap: inherit;
 }
 
 .blog1Standalone {
